@@ -248,9 +248,16 @@ function draw() {
 - [Hydra docs](https://hydra.ojack.xyz/docs/)
 - [Interactive function reference](https://hydra.ojack.xyz/api/)
 
+
+
 ##### Key concepts
 
 - **Sources** `noise()`, `voronoi()`, `osc()`, plus external sources (webcam, screen, p5 canvas)
+```javascript
+noize(3,.5).out()
+voronoi(3,.5).out()
+osc(3,.5,1).out()
+```
 - **Geometry** `rotate()`, `scale()`, `pixelate()`, `kaleid()` to transform visuals
 - **Modulate** `modulate()`, `modulateScale()` use one texture to distort another
 - **Blend** `blend()`, `add()`, `mult()` combine layers together
