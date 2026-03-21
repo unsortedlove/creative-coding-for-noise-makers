@@ -330,3 +330,44 @@ osc()
 ```
 
 - **p5 → Hydra** feed your p5.js canvas into Hydra as a source for further processing
+
+
+- **strudel → p5** feed your strudel composition to p5.js canvas for further processing
+```javascript
+// strudel
+$: sound("bd hh*8 bd*4 hh*4")
+	.dec(.2).delay(.4)
+	// .color("cyan magenta yellow")
+	.p5live(() => {
+		// console.log(hap)
+		// filter for bd and sd events
+		if(hap.s == 'bd') {
+			bd = 1
+		}
+
+		if(hap.s == 'hh') {
+			sd = 1
+		}
+	})
+
+// hush() // silence everything above it
+// strudel
+
+// store some global vars
+var bd = 0, sd = 0
+
+function setup() {
+	createCanvas(windowWidth, windowHeight)
+}
+
+function draw() {
+	clear()
+
+	strudel.hide(1) // 0 to show
+	
+	ellipse(width / 2 + 100, height / 2, bd * 200)
+	ellipse(width / 2 - 100, height / 2,sd * 200)
+	bd = ease(.2, bd, .02)
+	sd = ease(0, sd, .05)
+}
+```
