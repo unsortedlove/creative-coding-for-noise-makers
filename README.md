@@ -263,18 +263,20 @@ osc(5,.5,1).out()
 - **Geometry** `rotate()`, `scale()`, `pixelate()`, `kaleid()` to transform visuals
 ```javascript
 noize(3,.5)
-.rotate(.1)
+.rotate(2,.3)
 .out()
 
 voronoi(3,.5)
-scale(-1.15)
+.scale(-1.15)
 .out()
 
 noize(3,.5)
-.rotate(.1)
+.pixelate(30,4)
 .out()
 
-osc(5,.5,1).out()
+osc(5,.5,1)
+.kaleid(8)
+.out()
 ```
 - **Modulate** `modulate()`, `modulateScale()` use one texture to distort another
 ```javascript
