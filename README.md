@@ -277,23 +277,54 @@ noize(3,.5)
 osc(5,.5,1).out()
 ```
 - **Modulate** `modulate()`, `modulateScale()` use one texture to distort another
+```javascript
+osc(3,.5,2)
+.modulate(noize(3), .2)
+.out(o0)
+
+osc()
+.modulateScalee(osc(3,.5,2), .2)
+.out(o0)
+```
+
 - **Blend** `blend()`, `add()`, `mult()` combine layers together
 ```javascript
-
 //blend
 osc(5,.5,1)
-.blend(noize(3,.5))
+.blend(noize(3,.5), 2.2)
 .out()
 
 //add
+noize(5,.5,1)
+.add(osc(3,.5)1, 0.2)
+.out()
+
+//blend
+osc(5,.5,1)
+.mult(osc(5,.25,1),.3)
+.out()
 
 ```
 
-- **Color** `posterize()`, `thresh()` colorize and modulate 
+- **Color** `contrast()`, `thresh()` colorize and modulate
+```javascript
+//contrast
+osc(3,.5,2)
+.contrast(5.4)
+.out()
+
+//thresh
+noise(3,0.1)
+.thresh(.05,0.04)
+.out()
+```
+
 - **Audio** `a.fft[]` to make visuals react to sound input
 ```javascript
-fft = Array(4)
-osc().modulate(noise(3),()=>a.fft[0]).out(o0)
+fft = Array(0)
+osc()
+.modulate(noise(3),()=>a.fft[0])
+.out(o0)
 ```
 
 - **p5 → Hydra** feed your p5.js canvas into Hydra as a source for further processing
