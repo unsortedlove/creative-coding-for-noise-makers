@@ -256,7 +256,7 @@ function draw() {
 ```javascript
 noize(3,.5).out()
 voronoi(3,.5).out()
-osc(3,.5,1).out()
+osc(5,.5,1).out()
 ```
 - **Geometry** `rotate()`, `scale()`, `pixelate()`, `kaleid()` to transform visuals
 - **Modulate** `modulate()`, `modulateScale()` use one texture to distort another
