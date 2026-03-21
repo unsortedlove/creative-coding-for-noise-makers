@@ -1,0 +1,37 @@
+README.md
+  2eeb90f77ace8721 1,5,7,9,15,17,19,23,25-54,56-73,75-87,89-92,94,97-105,108,110,112,115-133,136,138,141-142,146,148-153,156,158,160,241,243,247-249,251
+  0c22c636c6a0f5d3 162-163,167-179,182-185,189-208,211-214,216-237,239
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15",
+  "base_commit_sha": "6a88d150adff8d7ed9ccce6fc8c663dd2022cb91",
+  "prompts": {
+    "0c22c636c6a0f5d3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9db522ca-565c-4b0b-b597-cba1ab6fa543",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "az3ta <24527778+az3ta@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 78,
+      "total_deletions": 3,
+      "accepted_lines": 75,
+      "overriden_lines": 3
+    },
+    "2eeb90f77ace8721": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c3d8dad-55ae-45e4-8da3-e9323d448e6a",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "az3ta <24527778+az3ta@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 150,
+      "total_deletions": 76,
+      "accepted_lines": 129,
+      "overriden_lines": 14
+    }
+  }
+}
