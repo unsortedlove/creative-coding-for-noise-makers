@@ -165,7 +165,7 @@ Once you're comfortable with the basics, try these:
 
 ```javascript
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
@@ -190,12 +190,12 @@ let x = 200;
 let speed = 3; // how many pixels the ball moves each frame
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background(30);
-  fill(255, 100, 150);
+  background(0);
+  fill(255);
   noStroke();
   ellipse(x, 200, 50, 50);
 
@@ -216,12 +216,12 @@ A loop lets you do something many times without writing it out over and over. In
 
 ```javascript
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   noLoop(); // only draw once — this is a static pattern
 }
 
 function draw() {
-  background(20);
+  background(0);
   noStroke();
   let spacing = 40; // distance between each circle
 
