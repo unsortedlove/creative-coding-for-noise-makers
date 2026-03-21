@@ -255,11 +255,45 @@ function draw() {
 - **Sources** `noise()`, `voronoi()`, `osc()`, plus external sources (webcam, screen, p5 canvas)
 ```javascript
 noize(3,.5).out()
+
 voronoi(3,.5).out()
+
 osc(5,.5,1).out()
 ```
 - **Geometry** `rotate()`, `scale()`, `pixelate()`, `kaleid()` to transform visuals
+```javascript
+noize(3,.5)
+.rotate(.1)
+.out()
+
+voronoi(3,.5)
+scale(-1.15)
+.out()
+
+noize(3,.5)
+.rotate(.1)
+.out()
+
+osc(5,.5,1).out()
+```
 - **Modulate** `modulate()`, `modulateScale()` use one texture to distort another
 - **Blend** `blend()`, `add()`, `mult()` combine layers together
+```javascript
+
+//blend
+osc(5,.5,1)
+.blend(noize(3,.5))
+.out()
+
+//add
+
+```
+
+- **Color** `posterize()`, `thresh()` colorize and modulate 
 - **Audio** `a.fft[]` to make visuals react to sound input
+```javascript
+fft = Array(4)
+osc().modulate(noise(3),()=>a.fft[0]).out(o0)
+```
+
 - **p5 → Hydra** feed your p5.js canvas into Hydra as a source for further processing
